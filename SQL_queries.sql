@@ -1,16 +1,7 @@
--- ---------------------------------------
--- 1. Create Database
--- ---------------------------------------
 CREATE DATABASE student_performance_db;
 
--- ---------------------------------------
--- 2. Use Database
--- ---------------------------------------
 USE student_performance_db;
 
--- ---------------------------------------
--- 3. Create Table
--- ---------------------------------------
 CREATE TABLE students (
     student_id INT PRIMARY KEY,
     name VARCHAR(50),
@@ -21,9 +12,6 @@ CREATE TABLE students (
     attendance INT
 );
 
--- ---------------------------------------
--- 4. Insert Data
--- ---------------------------------------
 INSERT INTO students VALUES
 (1,'Amit','CS',78,85,90,92),
 (2,'Riya','CS',88,79,85,90),
@@ -46,14 +34,8 @@ INSERT INTO students VALUES
 (19,'Nitin','CS',77,80,79,88),
 (20,'Simran','IT',83,85,82,91);
 
--- ---------------------------------------
--- 5. Display All Student Records
--- ---------------------------------------
 SELECT * FROM students;
 
--- ---------------------------------------
--- 6. Calculate Average Marks of Each Student
--- ---------------------------------------
 SELECT 
     student_id,
     name,
@@ -61,9 +43,6 @@ SELECT
     (math + science + programming) / 3 AS average_marks
 FROM students;
 
--- ---------------------------------------
--- 7. Identify Top-Performing Student
--- ---------------------------------------
 SELECT 
     name,
     (math + science + programming) / 3 AS average_marks
@@ -71,34 +50,22 @@ FROM students
 ORDER BY average_marks DESC
 LIMIT 1;
 
--- ---------------------------------------
--- 8. Department-wise Average Marks
--- ---------------------------------------
 SELECT 
     department,
     AVG((math + science + programming) / 3) AS dept_average
 FROM students
 GROUP BY department;
 
--- ---------------------------------------
--- 9. Students Scoring Below 60
--- ---------------------------------------
 SELECT 
     name,
     (math + science + programming) / 3 AS average_marks
 FROM students
 WHERE (math + science + programming) / 3 < 60;
 
--- ---------------------------------------
--- 10. Overall Class Average
--- ---------------------------------------
 SELECT 
     AVG((math + science + programming) / 3) AS overall_average
 FROM students;
 
--- ---------------------------------------
--- 11. At-Risk Students (Extra for High Marks)
--- ---------------------------------------
 SELECT 
     name,
     department,
@@ -110,18 +77,12 @@ SELECT
     END AS status
 FROM students;
 
--- ---------------------------------------
--- 12. Sort Students by Highest Average Marks
--- ---------------------------------------
 SELECT 
     name,
     (math + science + programming) / 3 AS average_marks
 FROM students
 ORDER BY average_marks DESC;
 
--- ---------------------------------------
--- 13. Top 5 Students
--- ---------------------------------------
 SELECT 
     name,
     (math + science + programming) / 3 AS average_marks
