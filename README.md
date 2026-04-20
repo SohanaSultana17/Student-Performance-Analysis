@@ -1,4 +1,3 @@
-# Student-Performance-Analysis
 # 📊 Student Performance Analysis System
 ## 📌 Project Overview
 
@@ -55,7 +54,7 @@ python analysis.py
 ### 3️⃣ Outputs
 
 * 📊 Charts → `screenshots/python output`
-* 📑 Excel → `Excel_File.xlsx`
+* 📑 Excel → `screenshots/excel output`
 * 🗄️ SQL → `screenshots/sql output`
 
 ---
@@ -82,18 +81,10 @@ python analysis.py
 ---
 
 ## 📷 Screenshots
-
+Contains all the screenshots of the output.
 ### 🔹 Excel Output
-
-(Add images here)
-
 ### 🔹 Python Output
-
-(Add images here)
-
 ### 🔹 SQL Output
-
-(Add images here)
 
 ---
 
